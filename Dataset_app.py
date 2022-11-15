@@ -53,7 +53,7 @@ if upload is not None:
     dup=dat.duplicated().any()
     if dup==True:
         st.warning('Dataset contain some duplicated value')
-        t=st.selectbox('Do you want to remove duplicate values',('No','Yes'))
+        t=st.selectbox('Do you want to remove duplicate values',('Select','Yes','No'))
         if t=='Yes':
             dat=dat.drop_duplicates()
             st.text('Duplicate data are now removed')
